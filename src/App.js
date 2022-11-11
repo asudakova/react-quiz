@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss';
+import Quiz from "./components/Quiz/Quiz";
+import Result from "./components/Result/Result";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="App__title">Welcome to my quiz!</h1>
+      <Quiz/>
+      {/*<Result/>*/}
     </div>
   );
 }
