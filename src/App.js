@@ -34,21 +34,21 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="App__title">Welcome to my quiz!</h1>
-      {step !== questions.length ? (
-        <Quiz
-          step={step}
-          questions={questions}
-          checkAnswer={checkAnswer}
-        />
-      ) : (
-        <Result
-          setStep={setStep}
-          correct={correct}
-          setCorrect={setCorrect}
-          questionsLength={questions.length}
-        />
-      )}
+      <div className="App__container">
+        <h1 className="App__title">Welcome to my quiz!</h1>
+        {step !== questions.length ? (
+          <Quiz
+            step={step}
+            questions={questions}
+            checkAnswer={checkAnswer}
+          />
+        ) : (
+          <Result
+            correct={correct}
+            questionsLength={questions.length}
+          />
+        )}
+      </div>
     </div>
   );
 }

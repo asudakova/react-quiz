@@ -4,7 +4,7 @@ import smile1 from "../../img/smile-01.png";
 import smile2 from "../../img/smile-02.png";
 import smile3 from "../../img/smile-03.png";
 
-const Result = ({setStep, correct, setCorrect, questionsLength}) => {
+const Result = ({correct, questionsLength}) => {
 
   function resultPic() {
     const part = Math.round(questionsLength / 3);
@@ -25,10 +25,7 @@ const Result = ({setStep, correct, setCorrect, questionsLength}) => {
       <div className="Result__text">You've got {correct} out of {questionsLength}!</div>
       <button
         className="Result__btn"
-        onClick={()=> {
-          setStep(0);
-          setCorrect(0)
-        }}
+        onClick={()=>window.location.reload()}
       >
         Try again
       </button>
