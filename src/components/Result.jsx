@@ -7,9 +7,9 @@ const Result = ({correct, questionsLength}) => {
 
   function resultPic() {
     const part = Math.round(questionsLength / 3);
-    if (correct > part * 2) {
+    if (correct > Math.round(part * 2.5)) {
       return smile1
-    } else if (correct <= part * 2 && correct > part){
+    } else if (correct <= Math.round(part * 2.5) && correct > part){
       return smile2
     } else if (correct <= part && correct >= 0) {
       return smile3;
