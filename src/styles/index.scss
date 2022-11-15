@@ -80,10 +80,6 @@
         margin-bottom: 15px;
       }
 
-      &:hover {
-        background-color: #d9d5d5;
-      }
-
       &:active {
         background-color: #d9d5d5;
       }
@@ -122,11 +118,24 @@
     font-weight: 400;
 
     transition: all .3s ease-in-out;
-    &:hover {
+  }
+}
+
+@media (hover: hover) {
+  .Quiz {
+    &__answers li {
+      &:hover {
+        background-color: #d9d5d5;
+      }
+    }
+  }
+  .Result {
+    &__btn:hover {
       background-color: #94cfe9;
     }
   }
 }
+
 @keyframes result-show {
   0% {
     opacity: 0;
