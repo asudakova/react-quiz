@@ -1,6 +1,6 @@
-import './styles/App.scss';
-import Quiz from "./components/Quiz/Quiz";
-import Result from "./components/Result/Result";
+import './styles/index.scss';
+import Quiz from "./components/Quiz";
+import Result from "./components/Result";
 import {useState} from "react";
 
 const questions = [
@@ -36,18 +36,20 @@ function App() {
     <div className="App">
       <div className="App__container">
         <h1 className="App__title">Welcome to my quiz!</h1>
-        {step !== questions.length ? (
-          <Quiz
-            step={step}
-            questions={questions}
-            checkAnswer={checkAnswer}
-          />
-        ) : (
-          <Result
-            correct={correct}
-            questionsLength={questions.length}
-          />
-        )}
+        <div className="App__card">
+          {step !== questions.length ? (
+            <Quiz
+              step={step}
+              questions={questions}
+              checkAnswer={checkAnswer}
+            />
+          ) : (
+            <Result
+              correct={correct}
+              questionsLength={questions.length}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

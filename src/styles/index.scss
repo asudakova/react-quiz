@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+
+.App {
+  min-height: 100vh;
+
+  background: rgb(238,174,202);
+  background: linear-gradient(rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+  font-family: 'Rubik', sans-serif;
+
+  &__container {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 30px 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: 400;
+  }
+
+  &__card {
+    min-height: 235px;
+    width: 500px;
+
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 25px;
+    position: relative;
+  }
+}
+
+.Quiz {
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  &__progress {
+    height: 6.5px;
+    width: 100%;
+    background-color: #d9d5d5;
+    margin-bottom: 20px;
+    border-radius: 2.5px;
+
+    div {
+      height: 100%;
+      width: 50%;
+      border-radius: 2.5px;
+      background: rgb(119,236,97);
+      background: linear-gradient(90deg, rgba(255,202,98,1) 0%,  rgba(119,236,97,1) 100%);
+      transition: all .3s ease-in-out;
+    }
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 33px;
+    margin-bottom: 20px;
+  }
+  &__answers {
+    font-size: 20px;
+    line-height: 22px;
+    li {
+      padding: 10px;
+      height: 100%;
+      border: 1.5px solid #a8a4a4;
+      border-radius: 10px;
+
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &:hover {
+        background-color: #d9d5d5;
+      }
+
+      &:active {
+        background-color: #d9d5d5;
+      }
+    }
+  }
+}
+
+.Result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 25px;
+  line-height: 27px;
+  font-weight: 400;
+  animation: result-show 0.4s ease-in-out;
+  &__pic {
+    width: 85px;
+    height: auto;
+    margin-bottom: 15px;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__btn {
+    padding: 8px;
+    border-radius: 10px;
+    background-color: #c58fe7;
+
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+
+    transition: all .3s ease-in-out;
+    &:hover {
+      background-color: #94cfe9;
+    }
+  }
+}
+@keyframes result-show {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

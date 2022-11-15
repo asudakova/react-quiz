@@ -1,8 +1,7 @@
 import React from 'react';
-import '../Result/Result.scss';
-import smile1 from "../../img/smile-01.png";
-import smile2 from "../../img/smile-02.png";
-import smile3 from "../../img/smile-03.png";
+import smile1 from "../img/smile-01.png";
+import smile2 from "../img/smile-02.png";
+import smile3 from "../img/smile-03.png";
 
 const Result = ({correct, questionsLength}) => {
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../Quiz/Quiz.scss';
 
 const Quiz = ({step, questions, checkAnswer}) => {
   const question = questions[step];
