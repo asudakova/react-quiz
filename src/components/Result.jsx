@@ -6,12 +6,12 @@ import smile3 from "../img/smile-03.png";
 const Result = ({correct, questionsLength}) => {
 
   function resultPic() {
-    const part = Math.round(questionsLength / 3);
-    if (correct > Math.round(part * 2.5)) {
+    const part = Math.ceil(questionsLength / 3);
+    if (correct >= part * 2) {
       return smile1
-    } else if (correct <= Math.round(part * 2.5) && correct > part){
+    } else if (correct < part * 2 && correct >= part){
       return smile2
-    } else if (correct <= part && correct >= 0) {
+    } else if (correct < part && correct >= 0) {
       return smile3;
     }
   }
